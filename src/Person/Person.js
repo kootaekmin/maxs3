@@ -1,16 +1,9 @@
 import React from 'react';
-import Radium from 'radium';
-import './Person.css';
+import classes from './Person.module.css';
 
 const Person = (props) => {
-  const style = {
-    // what is media query?
-    '@media (min-width: 500px)': {
-      width: '500px',
-    },
-  };
   return (
-    <div className="Person" style={style}>
+    <div className={classes.Person}>
       <p onClick={props.click}>
         I'm {props.name} and I am {props.age} years old!
       </p>
@@ -20,4 +13,4 @@ const Person = (props) => {
   );
 };
 
-export default Radium(Person);
+export default Person;
